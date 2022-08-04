@@ -1,18 +1,18 @@
 Version 4.0 HI-TECH Software Intermediate Code
-"61 main.c
-[; ;main.c: 61:  state currentState;
+"62 main.c
+[; ;main.c: 62:  state currentState;
 [c E2857 0 1 2 .. ]
 [n E2857 . STATE1 STATE2 STATE3  ]
-"84
-[; ;main.c: 84: event eventOccured;
+"85
+[; ;main.c: 85: event eventOccured;
 [c E2863 0 1 2 3 .. ]
 [n E2863 . NILEVENT EVENT_1 EVENT_2 EVENT_MAX  ]
 "105 C:\Program Files\Microchip\xc8\v2.36\pic\include\c99\stdio.h
 [; ;C:\Program Files\Microchip\xc8\v2.36\pic\include\c99\stdio.h: 105: int printf(const char *restrict, ...);
 [v _printf `(i ~T0 @X0 0 ev`*Cuc ]
 [v F2898 `(v ~T0 @X0 0 t? ]
-"148 main.c
-[; ;main.c: 148: typedef struct {
+"149 main.c
+[; ;main.c: 149: typedef struct {
 [s S366 `E2857 1 `*F2898 1 ]
 [n S366 . nextState actionToDo ]
 [v F2902 `(v ~T0 @X0 0 t? ]
@@ -512,132 +512,132 @@ Version 4.0 HI-TECH Software Intermediate Code
 "6749
 [; ;C:/Program Files/Microchip/MPLABX/v6.00/packs/Microchip/PIC12-16F1xxx_DFP/1.3.90/xc8\pic\include\proc\pic16f1827.h: 6749: __asm("TOSH equ 0FEFh");
 [; <" TOSH equ 0FEFh ;# ">
-"61 main.c
-[; ;main.c: 61:  state currentState;
+"62 main.c
+[; ;main.c: 62:  state currentState;
 [v _currentState `E2857 ~T0 @X0 1 e ]
-"84
-[; ;main.c: 84: event eventOccured;
+"85
+[; ;main.c: 85: event eventOccured;
 [v _eventOccured `E2863 ~T0 @X0 1 e ]
-"110
-[; ;main.c: 110: void action1_1() {
+"111
+[; ;main.c: 111: void action1_1() {
 [v _action1_1 `(v ~T0 @X0 1 ef ]
 {
 [e :U _action1_1 ]
 [f ]
-"111
-[; ;main.c: 111:   printf("action1.1 \n");
-[e ( _printf :s 1C ]
 "112
-[; ;main.c: 112: }
+[; ;main.c: 112:   printf("action1.1 \n");
+[e ( _printf :s 1C ]
+"113
+[; ;main.c: 113: }
 [e :UE 357 ]
 }
-"114
-[; ;main.c: 114: void action1_2() {
+"115
+[; ;main.c: 115: void action1_2() {
 [v _action1_2 `(v ~T0 @X0 1 ef ]
 {
 [e :U _action1_2 ]
 [f ]
-"115
-[; ;main.c: 115:   printf("action1.2 \n");
-[e ( _printf :s 2C ]
 "116
-[; ;main.c: 116: }
+[; ;main.c: 116:   printf("action1.2 \n");
+[e ( _printf :s 2C ]
+"117
+[; ;main.c: 117: }
 [e :UE 358 ]
 }
-"118
-[; ;main.c: 118: void action1_3() {
+"119
+[; ;main.c: 119: void action1_3() {
 [v _action1_3 `(v ~T0 @X0 1 ef ]
 {
 [e :U _action1_3 ]
 [f ]
-"119
-[; ;main.c: 119:   printf("action1.3 \n");
-[e ( _printf :s 3C ]
 "120
-[; ;main.c: 120: }
+[; ;main.c: 120:   printf("action1.3 \n");
+[e ( _printf :s 3C ]
+"121
+[; ;main.c: 121: }
 [e :UE 359 ]
 }
-"122
-[; ;main.c: 122: void action2_1() {
+"123
+[; ;main.c: 123: void action2_1() {
 [v _action2_1 `(v ~T0 @X0 1 ef ]
 {
 [e :U _action2_1 ]
 [f ]
-"123
-[; ;main.c: 123:   printf("action2.1 \n");
-[e ( _printf :s 4C ]
 "124
-[; ;main.c: 124: }
+[; ;main.c: 124:   printf("action2.1 \n");
+[e ( _printf :s 4C ]
+"125
+[; ;main.c: 125: }
 [e :UE 360 ]
 }
-"126
-[; ;main.c: 126: void action2_2() {
+"127
+[; ;main.c: 127: void action2_2() {
 [v _action2_2 `(v ~T0 @X0 1 ef ]
 {
 [e :U _action2_2 ]
 [f ]
-"127
-[; ;main.c: 127:   printf("action2.2 \n");
-[e ( _printf :s 5C ]
 "128
-[; ;main.c: 128: }
+[; ;main.c: 128:   printf("action2.2 \n");
+[e ( _printf :s 5C ]
+"129
+[; ;main.c: 129: }
 [e :UE 361 ]
 }
-"130
-[; ;main.c: 130: void action2_3() {
+"131
+[; ;main.c: 131: void action2_3() {
 [v _action2_3 `(v ~T0 @X0 1 ef ]
 {
 [e :U _action2_3 ]
 [f ]
-"131
-[; ;main.c: 131:   printf("action2.3 \n");
-[e ( _printf :s 6C ]
 "132
-[; ;main.c: 132: }
+[; ;main.c: 132:   printf("action2.3 \n");
+[e ( _printf :s 6C ]
+"133
+[; ;main.c: 133: }
 [e :UE 362 ]
 }
-"134
-[; ;main.c: 134: void action3_1() {
+"135
+[; ;main.c: 135: void action3_1() {
 [v _action3_1 `(v ~T0 @X0 1 ef ]
 {
 [e :U _action3_1 ]
 [f ]
-"135
-[; ;main.c: 135:   printf("action3.1 \n");
-[e ( _printf :s 7C ]
 "136
-[; ;main.c: 136: }
+[; ;main.c: 136:   printf("action3.1 \n");
+[e ( _printf :s 7C ]
+"137
+[; ;main.c: 137: }
 [e :UE 363 ]
 }
-"138
-[; ;main.c: 138: void action3_2() {
+"139
+[; ;main.c: 139: void action3_2() {
 [v _action3_2 `(v ~T0 @X0 1 ef ]
 {
 [e :U _action3_2 ]
 [f ]
-"139
-[; ;main.c: 139:   printf("action3.2 \n");
-[e ( _printf :s 8C ]
 "140
-[; ;main.c: 140: }
+[; ;main.c: 140:   printf("action3.2 \n");
+[e ( _printf :s 8C ]
+"141
+[; ;main.c: 141: }
 [e :UE 364 ]
 }
-"142
-[; ;main.c: 142: void action3_3() {
+"143
+[; ;main.c: 143: void action3_3() {
 [v _action3_3 `(v ~T0 @X0 1 ef ]
 {
 [e :U _action3_3 ]
 [f ]
-"143
-[; ;main.c: 143:   printf("action3.3 \n");
-[e ( _printf :s 9C ]
 "144
-[; ;main.c: 144: }
+[; ;main.c: 144:   printf("action3.3 \n");
+[e ( _printf :s 9C ]
+"145
+[; ;main.c: 145: }
 [e :UE 365 ]
 }
 [v F2901 `S366 ~T0 @X0 -> 3 `i t ]
-"154
-[; ;main.c: 154: stateElement stateMatrix[3][3] = {
+"155
+[; ;main.c: 155: stateElement stateMatrix[3][3] = {
 [v _stateMatrix `F2901 ~T0 @X0 -> 3 `i e ]
 [i _stateMatrix
 :U ..
@@ -685,91 +685,91 @@ Version 4.0 HI-TECH Software Intermediate Code
 ..
 ..
 ]
-"169
-[; ;main.c: 169: void stateEval(event e)
-[v _stateEval `(v ~T0 @X0 1 ef1`E2863 ]
 "170
-[; ;main.c: 170: {
+[; ;main.c: 170: void stateEval(event e)
+[v _stateEval `(v ~T0 @X0 1 ef1`E2863 ]
+"171
+[; ;main.c: 171: {
 {
 [e :U _stateEval ]
-"169
-[; ;main.c: 169: void stateEval(event e)
-[v _e `E2863 ~T0 @X0 1 r1 ]
 "170
-[; ;main.c: 170: {
+[; ;main.c: 170: void stateEval(event e)
+[v _e `E2863 ~T0 @X0 1 r1 ]
+"171
+[; ;main.c: 171: {
 [f ]
-"172
-[; ;main.c: 172:         stateElement stateEvaluation = stateMatrix[currentState][e];
+"173
+[; ;main.c: 173:         stateElement stateEvaluation = stateMatrix[currentState][e];
 [v _stateEvaluation `S366 ~T0 @X0 1 a ]
 [e = _stateEvaluation *U + &U *U + &U _stateMatrix * -> _currentState `ux -> * -> # *U &U *U &U _stateMatrix `ui -> -> 3 `i `ui `ux * -> _e `ux -> -> # *U &U *U + &U _stateMatrix * -> _currentState `ux -> * -> # *U &U *U &U _stateMatrix `ui -> -> 3 `i `ui `ux `ui `ux ]
-"176
-[; ;main.c: 176:     currentState = stateEvaluation.nextState;
+"177
+[; ;main.c: 177:     currentState = stateEvaluation.nextState;
 [e = _currentState . _stateEvaluation 0 ]
-"179
-[; ;main.c: 179:     (*stateEvaluation.actionToDo)();
+"180
+[; ;main.c: 180:     (*stateEvaluation.actionToDo)();
 [e ( *U . _stateEvaluation 1 ..  ]
-"181
-[; ;main.c: 181: }
+"182
+[; ;main.c: 182: }
 [e :UE 367 ]
 }
 [v $root$_main `(v ~T0 @X0 0 e ]
-"184
-[; ;main.c: 184: void main()
-[v _main `(v ~T0 @X0 1 ef ]
 "185
-[; ;main.c: 185: {
+[; ;main.c: 185: void main()
+[v _main `(v ~T0 @X0 1 ef ]
+"186
+[; ;main.c: 186: {
 {
 [e :U _main ]
 [f ]
-"186
-[; ;main.c: 186:     SYSTEM_Initialize();
+"187
+[; ;main.c: 187:     SYSTEM_Initialize();
 [e ( _SYSTEM_Initialize ..  ]
-"188
-[; ;main.c: 188:    printf("Test");
+"189
+[; ;main.c: 189:    printf("Test");
 [e ( _printf :s 10C ]
-"197
-[; ;main.c: 197:    srand(19);
+"198
+[; ;main.c: 198:    srand(19);
 [e ( _srand (1 -> -> 19 `i `ui ]
-"203
-[; ;main.c: 203:    while (1) {
+"204
+[; ;main.c: 204:    while (1) {
 [e :U 370 ]
 {
-"205
-[; ;main.c: 205:       eventOccured = rand()%EVENT_MAX;
+"206
+[; ;main.c: 206:       eventOccured = rand()%EVENT_MAX;
 [e = _eventOccured -> % ( _rand ..  -> . `E2863 3 `i `E2863 ]
-"209
-[; ;main.c: 209:       if (eventOccured != NILEVENT) {
+"210
+[; ;main.c: 210:       if (eventOccured != NILEVENT) {
 [e $ ! != -> _eventOccured `ui -> . `E2863 0 `ui 372  ]
 {
-"211
-[; ;main.c: 211:          if (eventOccured <= EVENT_MAX) {
+"212
+[; ;main.c: 212:          if (eventOccured <= EVENT_MAX) {
 [e $ ! <= -> _eventOccured `ui -> . `E2863 3 `ui 373  ]
 {
-"212
-[; ;main.c: 212:              _delay((unsigned long)((10)*(500000/4000.0)));
-[e ( __delay (1 -> * -> -> 10 `i `d / -> -> 500000 `l `d .4000.0 `ul ]
 "213
-[; ;main.c: 213:              stateEval(eventOccured);
-[e ( _stateEval (1 _eventOccured ]
+[; ;main.c: 213:              _delay((unsigned long)((10)*(500000/4000.0)));
+[e ( __delay (1 -> * -> -> 10 `i `d / -> -> 500000 `l `d .4000.0 `ul ]
 "214
-[; ;main.c: 214:             eventOccured = NILEVENT;
-[e = _eventOccured . `E2863 0 ]
+[; ;main.c: 214:              stateEval(eventOccured);
+[e ( _stateEval (1 _eventOccured ]
 "215
-[; ;main.c: 215:          }
+[; ;main.c: 215:             eventOccured = NILEVENT;
+[e = _eventOccured . `E2863 0 ]
+"216
+[; ;main.c: 216:          }
 }
 [e :U 373 ]
-"216
-[; ;main.c: 216:       }
+"217
+[; ;main.c: 217:       }
 }
 [e :U 372 ]
-"217
-[; ;main.c: 217:    }
+"218
+[; ;main.c: 218:    }
 }
 [e :U 369 ]
 [e $U 370  ]
 [e :U 371 ]
-"218
-[; ;main.c: 218: }
+"219
+[; ;main.c: 219: }
 [e :UE 368 ]
 }
 [p f _printf 8388608 ]

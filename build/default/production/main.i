@@ -7,7 +7,7 @@
 # 1 "C:/Program Files/Microchip/MPLABX/v6.00/packs/Microchip/PIC12-16F1xxx_DFP/1.3.90/xc8\\pic\\include\\language_support.h" 1 3
 # 2 "<built-in>" 2
 # 1 "main.c" 2
-# 44 "main.c"
+# 45 "main.c"
 # 1 "./mcc_generated_files/mcc.h" 1
 # 49 "./mcc_generated_files/mcc.h"
 # 1 "C:/Program Files/Microchip/MPLABX/v6.00/packs/Microchip/PIC12-16F1xxx_DFP/1.3.90/xc8\\pic\\include\\xc.h" 1 3
@@ -4594,8 +4594,8 @@ void SYSTEM_Initialize(void);
 void OSCILLATOR_Initialize(void);
 # 99 "./mcc_generated_files/mcc.h"
 void WDT_Initialize(void);
-# 44 "main.c" 2
-# 55 "main.c"
+# 45 "main.c" 2
+# 56 "main.c"
 typedef enum {
 STATE1,
 STATE2,
@@ -4603,7 +4603,7 @@ STATE3
 } state;
 
  state currentState;
-# 77 "main.c"
+# 78 "main.c"
 typedef enum {
    NILEVENT,
    EVENT_1,
@@ -4686,7 +4686,7 @@ stateElement stateMatrix[3][3] = {
   { {STATE2, action2_1}, {STATE2, action2_2}, {STATE3, action2_3} },
   { {STATE3, action3_1}, {STATE3, action3_2}, {STATE3, action3_3} }
 };
-# 169 "main.c"
+# 170 "main.c"
 void stateEval(event e)
 {
 
@@ -4707,7 +4707,7 @@ void main()
     SYSTEM_Initialize();
 
    printf("Test");
-# 197 "main.c"
+# 198 "main.c"
    srand(19);
 
 
