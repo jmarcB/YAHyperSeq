@@ -12,14 +12,15 @@ channel_Temp 29
 channel_DAC 30
 channel_FVR 31
 ]
-"62 C:\Users\Jean-marc\MPLABXProjects\StateEventMachinev2.X\main.c
+"63 C:\Users\Jean-marc\MPLABXProjects\StateEventMachinev2.X\main.c
 [e E2857 . `uc
 STATE1 0
 STATE2 1
 STATE3 2
+STATE_MAX 3
 ]
-"85
-[e E2863 . `uc
+"86
+[e E2864 . `uc
 NILEVENT 0
 EVENT_1 1
 EVENT_2 2
@@ -57,27 +58,27 @@ EVENT_MAX 3
 [v ___eecpymem __eecpymem `(v  1 e 1 0 ]
 "39
 [v ___memcpyee __memcpyee `(v  1 e 1 0 ]
-"111 C:\Users\Jean-marc\MPLABXProjects\StateEventMachinev2.X\main.c
+"112 C:\Users\Jean-marc\MPLABXProjects\StateEventMachinev2.X\main.c
 [v _action1_1 action1_1 `(v  1 e 1 0 ]
-"115
+"116
 [v _action1_2 action1_2 `(v  1 e 1 0 ]
-"119
+"120
 [v _action1_3 action1_3 `(v  1 e 1 0 ]
-"123
+"124
 [v _action2_1 action2_1 `(v  1 e 1 0 ]
-"127
+"128
 [v _action2_2 action2_2 `(v  1 e 1 0 ]
-"131
+"132
 [v _action2_3 action2_3 `(v  1 e 1 0 ]
-"135
+"136
 [v _action3_1 action3_1 `(v  1 e 1 0 ]
-"139
+"140
 [v _action3_2 action3_2 `(v  1 e 1 0 ]
-"143
+"144
 [v _action3_3 action3_3 `(v  1 e 1 0 ]
-"170
+"171
 [v _stateEval stateEval `(v  1 e 1 0 ]
-"185
+"186
 [v _main main `(v  1 e 1 0 ]
 "67 C:\Users\Jean-marc\MPLABXProjects\StateEventMachinev2.X\mcc_generated_files/adc.c
 [v _ADC_Initialize ADC_Initialize `(v  1 e 1 0 ]
@@ -263,13 +264,13 @@ EVENT_MAX 3
 [v _nout nout `i  1 s 2 nout ]
 "4 C:\Program Files\Microchip\xc8\v2.36\pic\sources\c99\common\rand.c
 [v _seed seed `ul  1 s 4 seed ]
-"62 C:\Users\Jean-marc\MPLABXProjects\StateEventMachinev2.X\main.c
+"63 C:\Users\Jean-marc\MPLABXProjects\StateEventMachinev2.X\main.c
 [v _currentState currentState `E2857  1 e 1 0 ]
-"85
-[v _eventOccured eventOccured `E2863  1 e 1 0 ]
-[s S498 . 3 `E2857 1 nextState 1 0 `*.37(v 1 actionToDo 2 1 ]
-"155
-[v _stateMatrix stateMatrix `[3][3]S498  1 e 27 0 ]
+"86
+[v _eventOccured eventOccured `E2864  1 e 1 0 ]
+[s S499 . 3 `E2857 1 nextState 1 0 `*.37(v 1 actionToDo 2 1 ]
+"156
+[v _stateMatrix stateMatrix `[3][3]S499  1 e 27 0 ]
 "30 C:\Users\Jean-marc\MPLABXProjects\StateEventMachinev2.X\mcc_generated_files/ext_int.c
 [v _INT_InterruptHandler INT_InterruptHandler `*.37(v  1 e 2 0 ]
 "54 C:\Users\Jean-marc\MPLABXProjects\StateEventMachinev2.X\mcc_generated_files/pin_manager.c
@@ -278,68 +279,68 @@ EVENT_MAX 3
 [v _timer0ReloadVal timer0ReloadVal `VEuc  1 e 1 0 ]
 "59
 [v _TMR0_InterruptHandler TMR0_InterruptHandler `*.37(v  1 e 2 0 ]
-"185 C:\Users\Jean-marc\MPLABXProjects\StateEventMachinev2.X\main.c
+"186 C:\Users\Jean-marc\MPLABXProjects\StateEventMachinev2.X\main.c
 [v _main main `(v  1 e 1 0 ]
 {
-"219
+"220
 } 0
-"170
+"171
 [v _stateEval stateEval `(v  1 e 1 0 ]
 {
-[v stateEval@e e `E2863  1 a 1 wreg ]
-[s S498 . 3 `E2857 1 nextState 1 0 `*.37(v 1 actionToDo 2 1 ]
-"173
-[v stateEval@stateEvaluation stateEvaluation `S498  1 a 3 18 ]
-"170
-[v stateEval@e e `E2863  1 a 1 wreg ]
-"173
-[v stateEval@e e `E2863  1 a 1 17 ]
-"182
+[v stateEval@e e `E2864  1 a 1 wreg ]
+[s S499 . 3 `E2857 1 nextState 1 0 `*.37(v 1 actionToDo 2 1 ]
+"174
+[v stateEval@stateEvaluation stateEvaluation `S499  1 a 3 18 ]
+"171
+[v stateEval@e e `E2864  1 a 1 wreg ]
+"174
+[v stateEval@e e `E2864  1 a 1 17 ]
+"183
 } 0
-"139
+"140
 [v _action3_2 action3_2 `(v  1 e 1 0 ]
 {
-"141
+"142
 } 0
-"135
+"136
 [v _action3_1 action3_1 `(v  1 e 1 0 ]
 {
-"137
+"138
 } 0
-"131
+"132
 [v _action2_3 action2_3 `(v  1 e 1 0 ]
 {
-"133
+"134
 } 0
-"127
+"128
 [v _action2_2 action2_2 `(v  1 e 1 0 ]
 {
-"129
+"130
 } 0
-"123
+"124
 [v _action2_1 action2_1 `(v  1 e 1 0 ]
 {
-"125
+"126
 } 0
-"119
+"120
 [v _action1_3 action1_3 `(v  1 e 1 0 ]
 {
-"121
+"122
 } 0
-"115
+"116
 [v _action1_2 action1_2 `(v  1 e 1 0 ]
 {
-"117
+"118
 } 0
-"111
+"112
 [v _action1_1 action1_1 `(v  1 e 1 0 ]
 {
-"113
+"114
 } 0
-"143
+"144
 [v _action3_3 action3_3 `(v  1 e 1 0 ]
 {
-"145
+"146
 } 0
 "5 C:\Program Files\Microchip\xc8\v2.36\pic\sources\c99\common\printf.c
 [v _printf printf `(i  1 e 2 0 ]
@@ -353,39 +354,39 @@ EVENT_MAX 3
 "1390 C:\Program Files\Microchip\xc8\v2.36\pic\sources\c99\common\doprnt.c
 [v _vfprintf vfprintf `(i  1 e 2 0 ]
 {
-[s S1030 _IO_FILE 0 ]
-[v vfprintf@fp fp `*.1S1030  1 a 1 wreg ]
+[s S1031 _IO_FILE 0 ]
+[v vfprintf@fp fp `*.1S1031  1 a 1 wreg ]
 "1393
 [v vfprintf@cfmt cfmt `*.25uc  1 a 2 8 ]
 "1390
-[v vfprintf@fp fp `*.1S1030  1 a 1 wreg ]
+[v vfprintf@fp fp `*.1S1031  1 a 1 wreg ]
 [v vfprintf@fmt fmt `*.25DCuc  1 p 2 11 ]
 [v vfprintf@ap ap `*.4*.4v  1 p 1 13 ]
 "1395
 "1390
-[v vfprintf@fp fp `*.1S1030  1 a 1 7 ]
+[v vfprintf@fp fp `*.1S1031  1 a 1 7 ]
 "1404
 } 0
 "692
 [v _vfpfcnvrt vfpfcnvrt `(i  1 s 2 vfpfcnvrt ]
 {
-[s S1030 _IO_FILE 0 ]
-[v vfpfcnvrt@fp fp `*.1S1030  1 a 1 wreg ]
-[v vfpfcnvrt@fp fp `*.1S1030  1 a 1 wreg ]
+[s S1031 _IO_FILE 0 ]
+[v vfpfcnvrt@fp fp `*.1S1031  1 a 1 wreg ]
+[v vfpfcnvrt@fp fp `*.1S1031  1 a 1 wreg ]
 [v vfpfcnvrt@fmt fmt `*.4*.25uc  1 p 1 8 ]
 [v vfpfcnvrt@ap ap `*.4*.4v  1 p 1 9 ]
 "702
 "692
-[v vfpfcnvrt@fp fp `*.1S1030  1 a 1 10 ]
+[v vfpfcnvrt@fp fp `*.1S1031  1 a 1 10 ]
 "1387
 } 0
 "8 C:\Program Files\Microchip\xc8\v2.36\pic\sources\c99\common\nf_fputc.c
 [v _fputc fputc `(i  1 e 2 0 ]
 {
 [v fputc@c c `i  1 p 2 0 ]
-[u S1008 . 2 `*.1uc 1 buffer 2 0 `*.1DCuc 1 source 2 0 ]
-[s S1011 _IO_FILE 10 `S1008 1 . 2 0 `i 1 count 2 2 `[2]uc 1 ungetbuf 2 4 `i 1 ungetcnt 2 6 `i 1 limit 2 8 ]
-[v fputc@fp fp `*.1S1011  1 p 1 2 ]
+[u S1009 . 2 `*.1uc 1 buffer 2 0 `*.1DCuc 1 source 2 0 ]
+[s S1012 _IO_FILE 10 `S1009 1 . 2 0 `i 1 count 2 2 `[2]uc 1 ungetbuf 2 4 `i 1 ungetcnt 2 6 `i 1 limit 2 8 ]
+[v fputc@fp fp `*.1S1012  1 p 1 2 ]
 "24
 } 0
 "7 C:\Program Files\Microchip\xc8\v2.36\pic\sources\c99\common\putch.c

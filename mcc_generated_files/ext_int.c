@@ -14,7 +14,7 @@
      This source file provides implementations for driver APIs for EXT_INT.
      Generation Information :
          Product Revision  :  PIC10 / PIC12 / PIC16 / PIC18 MCUs - 1.81.8
-         Device            :  PIC16F1827
+         Device            :  PIC16F18855
          Driver Version    :  1.11
      The generated drivers are tested against the following:
          Compiler          :  XC8 2.36 and above
@@ -62,7 +62,7 @@ void EXT_INT_Initialize(void)
     // Clear the interrupt flag
     // Set the external interrupt edge detect
     EXT_INT_InterruptFlagClear();   
-    EXT_INT_fallingEdgeSet();    
+    EXT_INT_risingEdgeSet();    
     // Set Default Interrupt Handler
     INT_SetInterruptHandler(INT_DefaultInterruptHandler);
     EXT_INT_InterruptEnable();      

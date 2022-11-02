@@ -14,7 +14,7 @@
     This header file provides implementations for driver APIs for all modules selected in the GUI.
     Generation Information :
         Product Revision  :  PIC10 / PIC12 / PIC16 / PIC18 MCUs - 1.81.8
-        Device            :  PIC16F1827
+        Device            :  PIC16F18855
         Driver Version    :  2.00
     The generated drivers are tested against the following:
         Compiler          :  XC8 2.36 and above or later
@@ -53,9 +53,8 @@
 #include <stdbool.h>
 #include <conio.h>
 #include "interrupt_manager.h"
+#include "adcc.h"
 #include "ext_int.h"
-#include "adc.h"
-#include "tmr0.h"
 #include "clkref.h"
 
 
@@ -85,18 +84,20 @@ void SYSTEM_Initialize(void);
     OSCILLATOR_Initialize(void);
  */
 void OSCILLATOR_Initialize(void);
+
 /**
  * @Param
     none
  * @Returns
     none
  * @Description
-    Initializes the WDT module to the default states configured in the
+    Initializes the PMD module to the default states configured in the
  *                  MCC GUI
  * @Example
-    WDT_Initialize(void);
+    PMD_Initialize(void);
  */
-void WDT_Initialize(void);
+void PMD_Initialize(void);
+
 
 #endif	/* MCC_H */
 /**

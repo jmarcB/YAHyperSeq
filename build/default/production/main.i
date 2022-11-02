@@ -4597,13 +4597,14 @@ void WDT_Initialize(void);
 # 45 "main.c" 2
 # 56 "main.c"
 typedef enum {
-STATE1,
-STATE2,
-STATE3
+    STATE1,
+    STATE2,
+    STATE3,
+    STATE_MAX
 } state;
 
  state currentState;
-# 78 "main.c"
+# 79 "main.c"
 typedef enum {
    NILEVENT,
    EVENT_1,
@@ -4681,12 +4682,12 @@ typedef struct {
 } stateElement;
 
 
-stateElement stateMatrix[3][3] = {
+stateElement stateMatrix[STATE_MAX][EVENT_MAX] = {
   { {STATE1, action1_1}, {STATE2, action1_2}, {STATE3, action1_3} },
   { {STATE2, action2_1}, {STATE2, action2_2}, {STATE3, action2_3} },
   { {STATE3, action3_1}, {STATE3, action3_2}, {STATE3, action3_3} }
 };
-# 170 "main.c"
+# 171 "main.c"
 void stateEval(event e)
 {
 
@@ -4707,7 +4708,7 @@ void main()
     SYSTEM_Initialize();
 
    printf("Test");
-# 198 "main.c"
+# 199 "main.c"
    srand(19);
 
 

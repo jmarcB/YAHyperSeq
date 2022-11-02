@@ -14,7 +14,7 @@
     This header file provides implementations for driver APIs for all modules selected in the GUI.
     Generation Information :
         Product Revision  :  PIC10 / PIC12 / PIC16 / PIC18 MCUs - 1.81.8
-        Device            :  PIC16F1827
+        Device            :  PIC16F18855
         Driver Version    :  2.00
     The generated drivers are tested against the following:
         Compiler          :  XC8 2.36 and above or later
@@ -49,31 +49,44 @@
 
 void SYSTEM_Initialize(void)
 {
-
+    PMD_Initialize();
     PIN_MANAGER_Initialize();
     OSCILLATOR_Initialize();
-    WDT_Initialize();
-    ADC_Initialize();
+    ADCC_Initialize();
     EXT_INT_Initialize();
-    TMR0_Initialize();
     CLKREF_Initialize();
 }
 
 void OSCILLATOR_Initialize(void)
 {
-    // SCS FOSC; SPLLEN disabled; IRCF 500KHz_MF; 
-    OSCCON = 0x38;
-    // TUN 0; 
+    // NOSC EXTOSC; NDIV 1; 
+    OSCCON1 = 0x70;
+    // CSWHOLD may proceed; SOSCPWR Low power; 
+    OSCCON3 = 0x00;
+    // MFOEN disabled; LFOEN disabled; ADOEN disabled; SOSCEN disabled; EXTOEN disabled; HFOEN disabled; 
+    OSCEN = 0x00;
+    // HFFRQ 4_MHz; 
+    OSCFRQ = 0x02;
+    // HFTUN 0; 
     OSCTUNE = 0x00;
-    // SBOREN disabled; 
-    BORCON = 0x00;
 }
 
-void WDT_Initialize(void)
+void PMD_Initialize(void)
 {
-    // WDTPS 1:65536; SWDTEN OFF; 
-    WDTCON = 0x16;
+    // CLKRMD CLKR enabled; SYSCMD SYSCLK enabled; SCANMD SCANNER enabled; FVRMD FVR enabled; IOCMD IOC enabled; CRCMD CRC enabled; NVMMD NVM enabled; 
+    PMD0 = 0x00;
+    // TMR0MD TMR0 enabled; TMR1MD TMR1 enabled; TMR4MD TMR4 enabled; TMR5MD TMR5 enabled; TMR2MD TMR2 enabled; TMR3MD TMR3 enabled; NCOMD DDS(NCO) enabled; TMR6MD TMR6 enabled; 
+    PMD1 = 0x00;
+    // ZCDMD ZCD enabled; DACMD DAC enabled; CMP1MD CMP1 enabled; ADCMD ADC enabled; CMP2MD CMP2 enabled; 
+    PMD2 = 0x00;
+    // CCP2MD CCP2 enabled; CCP1MD CCP1 enabled; CCP4MD CCP4 enabled; CCP3MD CCP3 enabled; CCP5MD CCP5 enabled; PWM6MD PWM6 enabled; PWM7MD PWM7 enabled; 
+    PMD3 = 0x00;
+    // CWG3MD CWG3 enabled; CWG2MD CWG2 enabled; CWG1MD CWG1 enabled; MSSP1MD MSSP1 enabled; UART1MD EUSART enabled; MSSP2MD MSSP2 enabled; 
+    PMD4 = 0x00;
+    // DSMMD DSM enabled; CLC3MD CLC3 enabled; CLC4MD CLC4 enabled; SMT1MD SMT1 enabled; SMT2MD SMT2 enabled; CLC1MD CLC1 enabled; CLC2MD CLC2 enabled; 
+    PMD5 = 0x00;
 }
+
 
 /**
  End of File

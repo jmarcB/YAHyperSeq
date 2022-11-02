@@ -1,7 +1,7 @@
 
 
 Microchip MPLAB XC8 Assembler V2.36 build 20220127204148 
-                                                                                               Thu Aug 04 15:45:58 2022
+                                                                                               Thu Aug 04 15:55:37 2022
 
 Microchip MPLAB XC8 C Compiler v2.36 (Free license) build 20220127204148 Og1 
      1                           	processor	16F1827
@@ -2226,7 +2226,7 @@ Microchip MPLAB XC8 C Compiler v2.36 (Free license) build 20220127204148 Og1
   2212 ;;
   2213 ;; *************** function _main *****************
   2214 ;; Defined at:
-  2215 ;;		line 185 in file "main.c"
+  2215 ;;		line 186 in file "main.c"
   2216 ;; Parameters:    Size  Location     Type
   2217 ;;		None
   2218 ;; Auto vars:     Size  Location     Type
@@ -2266,11 +2266,11 @@ Microchip MPLAB XC8 C Compiler v2.36 (Free license) build 20220127204148 Og1
   2252                           ; Regs used in _main: [wreg-fsr1h+status,2+status,0+pclath+cstack]
   2253                           
   2254                           
-  2255                           ;main.c: 187:     SYSTEM_Initialize();
+  2255                           ;main.c: 188:     SYSTEM_Initialize();
   2256  015D  3182  2296  3181   	fcall	_SYSTEM_Initialize
   2257  0160                     l1553:
   2258                           
-  2259                           ;main.c: 189:    printf("Test");
+  2259                           ;main.c: 190:    printf("Test");
   2260  0160  3019               	movlw	low (STR_10| (0+32768))
   2261  0161  0020               	movlb	0	; select bank0
   2262  0162  00C5               	movwf	printf@fmt
@@ -2279,7 +2279,7 @@ Microchip MPLAB XC8 C Compiler v2.36 (Free license) build 20220127204148 Og1
   2265  0165  3182  22C1  3181   	fcall	_printf
   2266  0168                     l1555:
   2267                           
-  2268                           ;main.c: 198:    srand(19);
+  2268                           ;main.c: 199:    srand(19);
   2269  0168  3013               	movlw	19
   2270  0169  00F0               	movwf	srand@s
   2271  016A  3000               	movlw	0
@@ -2287,7 +2287,7 @@ Microchip MPLAB XC8 C Compiler v2.36 (Free license) build 20220127204148 Og1
   2273  016C  3183  2389  3181   	fcall	_srand
   2274  016F                     l1557:
   2275                           
-  2276                           ;main.c: 206:       eventOccured = rand()%EVENT_MAX;
+  2276                           ;main.c: 207:       eventOccured = rand()%EVENT_MAX;
   2277  016F  3003               	movlw	3
   2278  0170  0020               	movlb	0	; select bank0
   2279  0171  00BF               	movwf	___awmod@divisor
@@ -2307,7 +2307,7 @@ Microchip MPLAB XC8 C Compiler v2.36 (Free license) build 20220127204148 Og1
   2293  0183  00E3               	movwf	_eventOccured
   2294  0184                     l1559:
   2295                           
-  2296                           ;main.c: 210:       if (eventOccured != NILEVENT) {
+  2296                           ;main.c: 211:       if (eventOccured != NILEVENT) {
   2297  0184  0863               	movf	_eventOccured,w
   2298  0185  1903               	btfsc	3,2
   2299  0186  2988               	goto	u701
@@ -2317,7 +2317,7 @@ Microchip MPLAB XC8 C Compiler v2.36 (Free license) build 20220127204148 Og1
   2303  0189                     u700:
   2304  0189                     l1561:
   2305                           
-  2306                           ;main.c: 212:          if (eventOccured <= EVENT_MAX) {
+  2306                           ;main.c: 213:          if (eventOccured <= EVENT_MAX) {
   2307  0189  3004               	movlw	4
   2308  018A  0263               	subwf	_eventOccured,w
   2309  018B  1803               	skipnc
@@ -2328,7 +2328,7 @@ Microchip MPLAB XC8 C Compiler v2.36 (Free license) build 20220127204148 Og1
   2314  018F                     u710:
   2315  018F                     l1563:
   2316                           
-  2317                           ;main.c: 213:              _delay((unsigned long)((10)*(500000/4000.0)));
+  2317                           ;main.c: 214:              _delay((unsigned long)((10)*(500000/4000.0)));
   2318  018F  30FA               	movlw	250
   2319  0190                     u727:
   2320  0190  3200               	nop2
@@ -2336,13 +2336,13 @@ Microchip MPLAB XC8 C Compiler v2.36 (Free license) build 20220127204148 Og1
   2322  0192  2990               	goto	u727
   2323  0193                     l1565:
   2324                           
-  2325                           ;main.c: 214:              stateEval(eventOccured);
+  2325                           ;main.c: 215:              stateEval(eventOccured);
   2326  0193  0020               	movlb	0	; select bank0
   2327  0194  0863               	movf	_eventOccured,w
   2328  0195  3182  2205  3181   	fcall	_stateEval
   2329  0198                     l1567:
   2330                           
-  2331                           ;main.c: 215:             eventOccured = NILEVENT;
+  2331                           ;main.c: 216:             eventOccured = NILEVENT;
   2332  0198  0020               	movlb	0	; select bank0
   2333  0199  01E3               	clrf	_eventOccured
   2334  019A  296F               	goto	l1557
@@ -2353,11 +2353,11 @@ Microchip MPLAB XC8 C Compiler v2.36 (Free license) build 20220127204148 Og1
   2339  0205                     __ptext1:	
   2340 ;; *************** function _stateEval *****************
   2341 ;; Defined at:
-  2342 ;;		line 170 in file "main.c"
+  2342 ;;		line 171 in file "main.c"
   2343 ;; Parameters:    Size  Location     Type
-  2344 ;;  e               1    wreg     enum E2863
+  2344 ;;  e               1    wreg     enum E2864
   2345 ;; Auto vars:     Size  Location     Type
-  2346 ;;  e               1   17[BANK0 ] enum E2863
+  2346 ;;  e               1   17[BANK0 ] enum E2864
   2347 ;;  stateEvaluat    3   18[BANK0 ] struct .
   2348 ;; Return value:  Size  Location     Type
   2349 ;;                  1    wreg      void 
@@ -2402,7 +2402,7 @@ Microchip MPLAB XC8 C Compiler v2.36 (Free license) build 20220127204148 Og1
   2388  0206  00CC               	movwf	stateEval@e
   2389  0207                     l1483:
   2390                           
-  2391                           ;main.c: 170: void stateEval(event e);main.c: 171: {;main.c: 173:         stateElement s
+  2391                           ;main.c: 171: void stateEval(event e);main.c: 172: {;main.c: 174:         stateElement s
       +                          tateEvaluation = stateMatrix[currentState][e];
   2392  0207  3009               	movlw	9
   2393  0208  00C9               	movwf	??_stateEval
@@ -2431,14 +2431,14 @@ Microchip MPLAB XC8 C Compiler v2.36 (Free license) build 20220127204148 Og1
   2416  0223  00CF               	movwf	stateEval@stateEvaluation+2
   2417  0224                     l1485:
   2418                           
-  2419                           ;main.c: 177:     currentState = stateEvaluation.nextState;
+  2419                           ;main.c: 178:     currentState = stateEvaluation.nextState;
   2420  0224  084D               	movf	stateEval@stateEvaluation,w
   2421  0225  00C9               	movwf	??_stateEval
   2422  0226  0849               	movf	??_stateEval,w
   2423  0227  00DB               	movwf	_currentState
   2424  0228                     l1487:
   2425                           
-  2426                           ;main.c: 180:     (*stateEvaluation.actionToDo)();
+  2426                           ;main.c: 181:     (*stateEvaluation.actionToDo)();
   2427  0228  3001               	movlw	1
   2428  0229  3E4D               	addlw	(low (stateEval@stateEvaluation| 0))& (0+255)
   2429  022A  0086               	movwf	6
@@ -2456,7 +2456,7 @@ Microchip MPLAB XC8 C Compiler v2.36 (Free license) build 20220127204148 Og1
   2441  0393                     __ptext2:	
   2442 ;; *************** function _action3_2 *****************
   2443 ;; Defined at:
-  2444 ;;		line 139 in file "main.c"
+  2444 ;;		line 140 in file "main.c"
   2445 ;; Parameters:    Size  Location     Type
   2446 ;;		None
   2447 ;; Auto vars:     Size  Location     Type
@@ -2492,7 +2492,7 @@ Microchip MPLAB XC8 C Compiler v2.36 (Free license) build 20220127204148 Og1
   2477                           ; Regs used in _action3_2: [wreg-fsr1h+status,2+status,0+pclath+cstack]
   2478                           
   2479                           
-  2480                           ;main.c: 140:   printf("action3.2 \n");
+  2480                           ;main.c: 141:   printf("action3.2 \n");
   2481  0393  304D               	movlw	low (STR_8| (0+32768))
   2482  0394  0020               	movlb	0	; select bank0
   2483  0395  00C5               	movwf	printf@fmt
@@ -2507,7 +2507,7 @@ Microchip MPLAB XC8 C Compiler v2.36 (Free license) build 20220127204148 Og1
   2492  039C                     __ptext3:	
   2493 ;; *************** function _action3_1 *****************
   2494 ;; Defined at:
-  2495 ;;		line 135 in file "main.c"
+  2495 ;;		line 136 in file "main.c"
   2496 ;; Parameters:    Size  Location     Type
   2497 ;;		None
   2498 ;; Auto vars:     Size  Location     Type
@@ -2543,7 +2543,7 @@ Microchip MPLAB XC8 C Compiler v2.36 (Free license) build 20220127204148 Og1
   2528                           ; Regs used in _action3_1: [wreg-fsr1h+status,2+status,0+pclath+cstack]
   2529                           
   2530                           
-  2531                           ;main.c: 136:   printf("action3.1 \n");
+  2531                           ;main.c: 137:   printf("action3.1 \n");
   2532  039C  3029               	movlw	low (STR_7| (0+32768))
   2533  039D  0020               	movlb	0	; select bank0
   2534  039E  00C5               	movwf	printf@fmt
@@ -2558,7 +2558,7 @@ Microchip MPLAB XC8 C Compiler v2.36 (Free license) build 20220127204148 Og1
   2543  03A5                     __ptext4:	
   2544 ;; *************** function _action2_3 *****************
   2545 ;; Defined at:
-  2546 ;;		line 131 in file "main.c"
+  2546 ;;		line 132 in file "main.c"
   2547 ;; Parameters:    Size  Location     Type
   2548 ;;		None
   2549 ;; Auto vars:     Size  Location     Type
@@ -2594,7 +2594,7 @@ Microchip MPLAB XC8 C Compiler v2.36 (Free license) build 20220127204148 Og1
   2579                           ; Regs used in _action2_3: [wreg-fsr1h+status,2+status,0+pclath+cstack]
   2580                           
   2581                           
-  2582                           ;main.c: 132:   printf("action2.3 \n");
+  2582                           ;main.c: 133:   printf("action2.3 \n");
   2583  03A5  3065               	movlw	low (STR_6| (0+32768))
   2584  03A6  0020               	movlb	0	; select bank0
   2585  03A7  00C5               	movwf	printf@fmt
@@ -2609,7 +2609,7 @@ Microchip MPLAB XC8 C Compiler v2.36 (Free license) build 20220127204148 Og1
   2594  03AE                     __ptext5:	
   2595 ;; *************** function _action2_2 *****************
   2596 ;; Defined at:
-  2597 ;;		line 127 in file "main.c"
+  2597 ;;		line 128 in file "main.c"
   2598 ;; Parameters:    Size  Location     Type
   2599 ;;		None
   2600 ;; Auto vars:     Size  Location     Type
@@ -2645,7 +2645,7 @@ Microchip MPLAB XC8 C Compiler v2.36 (Free license) build 20220127204148 Og1
   2630                           ; Regs used in _action2_2: [wreg-fsr1h+status,2+status,0+pclath+cstack]
   2631                           
   2632                           
-  2633                           ;main.c: 128:   printf("action2.2 \n");
+  2633                           ;main.c: 129:   printf("action2.2 \n");
   2634  03AE  3041               	movlw	low (STR_5| (0+32768))
   2635  03AF  0020               	movlb	0	; select bank0
   2636  03B0  00C5               	movwf	printf@fmt
@@ -2660,7 +2660,7 @@ Microchip MPLAB XC8 C Compiler v2.36 (Free license) build 20220127204148 Og1
   2645  03B7                     __ptext6:	
   2646 ;; *************** function _action2_1 *****************
   2647 ;; Defined at:
-  2648 ;;		line 123 in file "main.c"
+  2648 ;;		line 124 in file "main.c"
   2649 ;; Parameters:    Size  Location     Type
   2650 ;;		None
   2651 ;; Auto vars:     Size  Location     Type
@@ -2696,7 +2696,7 @@ Microchip MPLAB XC8 C Compiler v2.36 (Free license) build 20220127204148 Og1
   2681                           ; Regs used in _action2_1: [wreg-fsr1h+status,2+status,0+pclath+cstack]
   2682                           
   2683                           
-  2684                           ;main.c: 124:   printf("action2.1 \n");
+  2684                           ;main.c: 125:   printf("action2.1 \n");
   2685  03B7  301D               	movlw	low (STR_4| (0+32768))
   2686  03B8  0020               	movlb	0	; select bank0
   2687  03B9  00C5               	movwf	printf@fmt
@@ -2711,7 +2711,7 @@ Microchip MPLAB XC8 C Compiler v2.36 (Free license) build 20220127204148 Og1
   2696  03C0                     __ptext7:	
   2697 ;; *************** function _action1_3 *****************
   2698 ;; Defined at:
-  2699 ;;		line 119 in file "main.c"
+  2699 ;;		line 120 in file "main.c"
   2700 ;; Parameters:    Size  Location     Type
   2701 ;;		None
   2702 ;; Auto vars:     Size  Location     Type
@@ -2747,7 +2747,7 @@ Microchip MPLAB XC8 C Compiler v2.36 (Free license) build 20220127204148 Og1
   2732                           ; Regs used in _action1_3: [wreg-fsr1h+status,2+status,0+pclath+cstack]
   2733                           
   2734                           
-  2735                           ;main.c: 120:   printf("action1.3 \n");
+  2735                           ;main.c: 121:   printf("action1.3 \n");
   2736  03C0  3059               	movlw	low (STR_3| (0+32768))
   2737  03C1  0020               	movlb	0	; select bank0
   2738  03C2  00C5               	movwf	printf@fmt
@@ -2762,7 +2762,7 @@ Microchip MPLAB XC8 C Compiler v2.36 (Free license) build 20220127204148 Og1
   2747  03C9                     __ptext8:	
   2748 ;; *************** function _action1_2 *****************
   2749 ;; Defined at:
-  2750 ;;		line 115 in file "main.c"
+  2750 ;;		line 116 in file "main.c"
   2751 ;; Parameters:    Size  Location     Type
   2752 ;;		None
   2753 ;; Auto vars:     Size  Location     Type
@@ -2798,7 +2798,7 @@ Microchip MPLAB XC8 C Compiler v2.36 (Free license) build 20220127204148 Og1
   2783                           ; Regs used in _action1_2: [wreg-fsr1h+status,2+status,0+pclath+cstack]
   2784                           
   2785                           
-  2786                           ;main.c: 116:   printf("action1.2 \n");
+  2786                           ;main.c: 117:   printf("action1.2 \n");
   2787  03C9  3035               	movlw	low (STR_2| (0+32768))
   2788  03CA  0020               	movlb	0	; select bank0
   2789  03CB  00C5               	movwf	printf@fmt
@@ -2813,7 +2813,7 @@ Microchip MPLAB XC8 C Compiler v2.36 (Free license) build 20220127204148 Og1
   2798  03D2                     __ptext9:	
   2799 ;; *************** function _action1_1 *****************
   2800 ;; Defined at:
-  2801 ;;		line 111 in file "main.c"
+  2801 ;;		line 112 in file "main.c"
   2802 ;; Parameters:    Size  Location     Type
   2803 ;;		None
   2804 ;; Auto vars:     Size  Location     Type
@@ -2849,7 +2849,7 @@ Microchip MPLAB XC8 C Compiler v2.36 (Free license) build 20220127204148 Og1
   2834                           ; Regs used in _action1_1: [wreg-fsr1h+status,2+status,0+pclath+cstack]
   2835                           
   2836                           
-  2837                           ;main.c: 112:   printf("action1.1 \n");
+  2837                           ;main.c: 113:   printf("action1.1 \n");
   2838  03D2  3011               	movlw	low (STR_1| (0+32768))
   2839  03D3  0020               	movlb	0	; select bank0
   2840  03D4  00C5               	movwf	printf@fmt
@@ -2864,7 +2864,7 @@ Microchip MPLAB XC8 C Compiler v2.36 (Free license) build 20220127204148 Og1
   2849  03DB                     __ptext10:	
   2850 ;; *************** function _action3_3 *****************
   2851 ;; Defined at:
-  2852 ;;		line 143 in file "main.c"
+  2852 ;;		line 144 in file "main.c"
   2853 ;; Parameters:    Size  Location     Type
   2854 ;;		None
   2855 ;; Auto vars:     Size  Location     Type
@@ -2900,7 +2900,7 @@ Microchip MPLAB XC8 C Compiler v2.36 (Free license) build 20220127204148 Og1
   2885                           ; Regs used in _action3_3: [wreg-fsr1h+status,2+status,0+pclath+cstack]
   2886                           
   2887                           
-  2888                           ;main.c: 144:   printf("action3.3 \n");
+  2888                           ;main.c: 145:   printf("action3.3 \n");
   2889  03DB  3071               	movlw	low (STR_9| (0+32768))
   2890  03DC  0020               	movlb	0	; select bank0
   2891  03DD  00C5               	movwf	printf@fmt
@@ -5333,11 +5333,11 @@ Pointer List with Targets:
     ADC_InterruptHandler	PTR FTN()void  size(2) Largest target is 1
 		 -> Absolute function(), 
 
-    S1008$source	PTR const unsigned char  size(1) Largest target is 0
+    S1009$source	PTR const unsigned char  size(1) Largest target is 0
 
     fputc@fp...source	PTR const unsigned char  size(1) Largest target is 0
 
-    S1008$buffer	PTR unsigned char  size(1) Largest target is 0
+    S1009$buffer	PTR unsigned char  size(1) Largest target is 0
 
     fputc@fp...buffer	PTR unsigned char  size(1) Largest target is 0
 
@@ -5379,7 +5379,7 @@ Pointer List with Targets:
 		 -> action2_2(), action2_1(), action1_3(), action1_2(), 
 		 -> action1_1(), 
 
-    S498$actionToDo	PTR FTN()void  size(2) Largest target is 1
+    S499$actionToDo	PTR FTN()void  size(2) Largest target is 1
 		 -> action3_3(), action3_2(), action3_1(), action2_3(), 
 		 -> action2_2(), action2_1(), action1_3(), action1_2(), 
 		 -> action1_1(), 
@@ -5787,7 +5787,7 @@ SFR31                0      0       0      32        0.0%
 
 
 Microchip Technology PIC Macro Assembler V2.36 build 20220127204148 
-Symbol Table                                                                                   Thu Aug 04 15:45:58 2022
+Symbol Table                                                                                   Thu Aug 04 15:55:37 2022
 
                                _stateMatrix 0020                              ___bmul@product 0072  
                                         l31 0426                                          l25 02AB  

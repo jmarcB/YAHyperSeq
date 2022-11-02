@@ -14,7 +14,7 @@
      This source file provides implementations for driver APIs for EXT_INT.
      Generation Information :
          Product Revision  :  PIC10 / PIC12 / PIC16 / PIC18 MCUs - 1.81.8
-         Device            :  PIC16F1827
+         Device            :  PIC16F18855
          Driver Version    :  1.11
      The generated drivers are tested against the following:
          Compiler          :  XC8 2.36 and above
@@ -90,7 +90,7 @@ extern "C" {
     </code>
 
 */
-#define EXT_INT_InterruptFlagClear()       (INTCONbits.INTF = 0)
+#define EXT_INT_InterruptFlagClear()       (PIR0bits.INTF = 0)
 
 /**
   @Summary
@@ -116,14 +116,14 @@ extern "C" {
     // clear the interrupt enable
     EXT_INT_InterruptDisable();
     // change the edge
-    EXT_INT_fallingEdgeSet();
+    EXT_INT_risingEdgeSet();
     // clear the interrupt flag and re-enable the interrupt
     EXT_INT_InterruptFlagClear();
     EXT_INT_InterruptEnable();
     </code>
 
 */
-#define EXT_INT_InterruptDisable()     (INTCONbits.INTE = 0)
+#define EXT_INT_InterruptDisable()     (PIE0bits.INTE = 0)
 
 /**
   @Summary
@@ -147,14 +147,14 @@ extern "C" {
     Setting the external interrupt to handle positive edge interrupts
     <code>
     // set the edge
-    EXT_INT_fallingEdgeSet();
+    EXT_INT_risingEdgeSet();
     // clear the interrupt flag and enable the interrupt
     EXT_INT_InterruptFlagClear();
     EXT_INT_InterruptEnable();
     </code>
 
 */
-#define EXT_INT_InterruptEnable()       (INTCONbits.INTE = 1)
+#define EXT_INT_InterruptEnable()       (PIE0bits.INTE = 1)
 
 /**
   @Summary
@@ -178,14 +178,14 @@ extern "C" {
     Setting the external interrupt to handle negative edge interrupts
     <code>
     // set the edge
-    EXT_INT_fallingEdgeSet();
+    EXT_INT_risingEdgeSet();
     // clear the interrupt flag and enable the interrupt
     EXT_INT_InterruptFlagClear();
     EXT_INT_InterruptEnable();
     </code>
 
 */
-#define EXT_INT_risingEdgeSet()          (OPTION_REGbits.INTEDG = 1)
+#define EXT_INT_risingEdgeSet()          (INTCONbits.INTEDG = 1)
 
 /**
   @Summary
@@ -209,14 +209,14 @@ extern "C" {
     Setting the external interrupt to handle positive edge interrupts
     <code>
     // set the edge
-    EXT_INT_fallingEdgeSet();
+    EXT_INT_risingEdgeSet();
     // clear the interrupt flag and enable the interrupt
     EXT_INT_InterruptFlagClear();
     EXT_INT_InterruptEnable();
     </code>
 
 */
-#define EXT_INT_fallingEdgeSet()          (OPTION_REGbits.INTEDG = 0)
+#define EXT_INT_fallingEdgeSet()          (INTCONbits.INTEDG = 0)
 /**
     Section: External Interrupt Initializers
  */

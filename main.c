@@ -54,9 +54,10 @@
 *******************************/
 
 typedef enum {
-STATE1,
-STATE2,
-STATE3
+    STATE1,
+    STATE2,
+    STATE3,
+    STATE_MAX
 } state;
  
  state   currentState;
@@ -152,7 +153,7 @@ typedef struct {
 }  stateElement;               // structure for the elements in the state-event matrix
 
 
-stateElement stateMatrix[3][3] = {
+stateElement stateMatrix[STATE_MAX][EVENT_MAX] = {
   { {STATE1, action1_1}, {STATE2, action1_2}, {STATE3, action1_3} },
   { {STATE2, action2_1}, {STATE2, action2_2}, {STATE3, action2_3} },
   { {STATE3, action3_1}, {STATE3, action3_2}, {STATE3, action3_3} }
@@ -198,6 +199,8 @@ void main()
    srand(19);
 
 
+   //ADC_GetSingleConversion(channel _ANA4);
+   
    // Main loop - no more to put in main()
    // Go
 
